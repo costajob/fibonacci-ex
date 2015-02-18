@@ -5,7 +5,7 @@ A simple module to perform Fibonacci computation in the [Elixir language](http:/
 I am not a great fan of mathematic, but the [sequence of Fibonacci](http://en.wikipedia.org/wiki/Fibonacci_number) is a good work horse to stress computation via recursive logic with any programming language.
 
 ## No tail-recursion
-This version does not attempt to perform tail-recursion, which indeed is optimized by some (BEAM) virtual machines (for an elegant solution [look here](https://gist.github.com/jbowles/8a2d8d177a6ed242e334)).
+This version does not attempt to perform tail-recursion, which indeed is optimized by some (BEAM) virtual machines (for an elegant solution [look here](https://searchcode.com/codesearch/view/2719356/)).
 Instead it relies on multiprocessing and memoization by using the Agent and Task abstractions in the Elixir base library.
 
 ## Cache VS Uncache
