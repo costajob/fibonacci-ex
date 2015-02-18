@@ -1,5 +1,5 @@
 ExUnit.start
-Code.require_file("fibonacci.exs", __DIR__)
+Code.require_file("fibonacci.ex", __DIR__)
 
 defmodule FibonacciTest do
   use ExUnit.Case, async: true 
