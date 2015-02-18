@@ -10,7 +10,7 @@ Instead it relies on multiprocessing and memoization by using the Agent and Task
 
 ## Cache VS Uncache
 The experiment prove that computation without cache will struggle when reaching the number of 30 (MacBook Pro i7 2.2Ghz 8GB).
-Memoized version is a blaze. More interesting is that the BEAM keeps memory consumption under control also with large numbers (> 100000).
+Memoized version is a blaze, but trades speed for memory consumption.
 
 ## API
 The use of the library is pretty straightforward:
