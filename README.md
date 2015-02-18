@@ -9,7 +9,7 @@ This version does not attempt to perform tail-recursion, which indeed is optimiz
 Instead it relies on multiprocessing and memoization by using the Agent and Task abstractions in the Elixir base library.
 
 ## Cache VS Uncache
-The experiment prove that computation without cache will struggle when reaching the number of 30 (MacBook Pro i7 2.2Ghz 8GB).
+Computation without cache starts struggling when reaching numbers near 30 (MacBook Pro i7 2.2Ghz 8GB).
 Memoized version is a blaze, but trades speed for memory consumption.
 
 ## API
