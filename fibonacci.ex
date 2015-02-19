@@ -11,7 +11,7 @@ defmodule Fibonacci do
   end
 
   def cache_start do
-    Agent.start_link(fn -> HashDict.new end, name: @cache_name)
+    Agent.start_link(&HashDict.new/0, name: @cache_name)
   end
 
   defp cache_set(n, result) do
