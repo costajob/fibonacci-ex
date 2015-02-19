@@ -1,7 +1,8 @@
 defmodule Fibonacci do
   @cache_name __MODULE__
 
-  def of(n) when n <= 1, do: 1
+  def of(0), do: 0
+  def of(1), do: 1
   def of(n) do
     if cache_active? do
       compute_with_cache(n)

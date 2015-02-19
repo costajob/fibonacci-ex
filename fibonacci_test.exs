@@ -6,10 +6,16 @@ defmodule FibonacciTest do
   
   setup_all do
     sequence = 10..20
-    results  = [89, 144, 233, 377, 610, 987, 1597, 2584, 4181, 6765, 10946]
+    results  = [55, 89, 144, 233, 377, 610, 987, 1597, 2584, 4181, 6765]
     {:ok, sequence: sequence, results: results}
   end
   
+  test "compute 0 and 1 values" do
+    immutable_seq = [0, 1]
+    assert immutable_seq
+    |> Enum.map(&Fibonacci.of/1) == immutable_seq
+  end
+
   test "compute the values without cache", context do
     assert context[:sequence]
     |> Enum.map(&Fibonacci.of/1) == context[:results]
